@@ -16,8 +16,8 @@ public class CreateTriangle : MonoBehaviour
         {
             Vector3[] vertexs = new Vector3[3];
             vertexs[0] = new Vector3(0, 0, 0);
-            vertexs[1] = new Vector3(2, 1, 4);
-            vertexs[2] = new Vector3(3, 8, 0);
+            vertexs[1] = new Vector3(2, 8, 4);
+            vertexs[2] = new Vector3(3, 0, 0);
 
             // 生成一个meshrenderer画出这个三角形
             Mesh mesh = new Mesh();
@@ -39,7 +39,12 @@ public class CreateTriangle : MonoBehaviour
             bounds.extents = Vector3.one * 10;
             heightField = new HeightField(bounds, 0.5f, 0.5f);
             voxel.RasterizeTri(vertexs, 3, heightField);
-            Debug.Log(heightField.width + " " + heightField.height);
+            for(int i = 0; i < heightField.width; i++)
+                for(int j = 0; j < heightField.height; j++)
+                {
+                    int index = j * heightField.width + i;
+                    if (heightField.spans[index] != null) Debug.Log(heightField.spans[index].min + " " + heightField.spans[index].max);
+                }
             
         }
     }
@@ -60,8 +65,7 @@ public class CreateTriangle : MonoBehaviour
                     Span currentSpan = heightField.spans[index];
                     while (currentSpan != null)
                     {
-                        Vector3 bbmin = heightField.bound.min; bbmin.y = 0;
-                        Vector3 center = new Vector3(i + 0.5f, 0, j + 0.5f) * heightField.cellSize + new Vector3(0, 1, 0) * (currentSpan.max - currentSpan.min) * heightField.cellHeight + bbmin;
+                        Vector3 center = new Vector3(i + 0.5f, 0, j + 0.5f) * heightField.cellSize + new Vector3(0, 1, 0) * (currentSpan.min + (currentSpan.max - currentSpan.min) / 2) * heightField.cellHeight + heightField.bound.min;
                         Vector3 size = new Vector3(heightField.cellSize, (currentSpan.max - currentSpan.min) * heightField.cellHeight, heightField.cellSize);
                         Gizmos.DrawWireCube(center, size);
                         currentSpan = currentSpan.next;

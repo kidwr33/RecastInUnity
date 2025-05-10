@@ -42,7 +42,6 @@ public class Voxel
 {
     public bool AddSpan(HeightField heightField, int x, int z, int areaID, int flagMergeThreshold, int min, int max)
     {
-        Debug.Log("AddSpan");
         Span newSpan = ObjectPool<Span>.Get();
         newSpan.min = min;
         newSpan.max = max;
@@ -95,6 +94,7 @@ public class Voxel
         }
         return true;
     }
+
     public void RasterizeTri(Vector3[] vertexs, int nVertexs, HeightField heightField)
     {
         if(nVertexs != 3)
@@ -107,43 +107,42 @@ public class Voxel
         if (!triBound.Intersects(heightField.bound)) return;
         // 其切的思路是：对于一个下标为z的轴，属于这一列的cell为下标范围从z到z+1的图形，所以用z+1的轴去切。
         // 这里clamp用-1的原因是，当有一个三角形部分在边界外面，需要切掉在外面的部分，-1开始就会用z = 0去切，从而切掉这部分。
-        int z0 = (int)Math.Clamp((triBound.min.z - heightField.bound.min.z) / heightField.cellSize, -1, heightField.depth - 1);
-        int z1 = (int)Math.Clamp((triBound.max.z - heightField.bound.min.z) / heightField.cellSize, 0, heightField.depth - 1);
-        Debug.Log("z0 z1: " + z0 + " " + z1);
+        int z0 = (int)Math.Clamp(Math.Ceiling(Math.Floor(triBound.min.z - heightField.bound.min.z) / heightField.cellSize), -1, heightField.depth - 1);
+        int z1 = (int)Math.Clamp(Math.Ceiling(Math.Ceiling(triBound.max.z - heightField.bound.min.z) / heightField.cellSize), 0, heightField.depth - 1);
         for(int z = z0; z <= z1; z++)
         {
             float cellZ = heightField.bound.min.z + heightField.cellSize * z;
             DividePolygan(vertexs, nVertexs, Axis.z, cellZ + heightField.cellSize, out Vector3[] cutSegment, out Vector3[] resident, out int nSeg, out int nResid);
             UtilFunc.Swap(ref resident, ref vertexs);
+            UtilFunc.Swap(ref nResid, ref nVertexs);
             if (nSeg < 3) continue; // 如果切下的碎片小于三个点，说明切的线在点上或边上
             if (z < 0) continue;
 
             float minX = float.MaxValue;
             float maxX = float.MinValue;
-            foreach(Vector3 vert in cutSegment)
+            for (int i = 0; i < nSeg; i++)
             {
-                if(minX > vert.x) minX = vert.x;
-                if (maxX < vert.x) maxX = vert.x;
+                if(minX > cutSegment[i].x) minX = cutSegment[i].x;
+                if(maxX < cutSegment[i].x) maxX = cutSegment[i].x;
             }
 
-            Debug.Log("minX maxX:" + minX + " " + maxX);
-            int x0 = (int)Math.Clamp((minX - heightField.bound.min.x) / heightField.cellSize, -1, heightField.width - 1);
-            int x1 = (int)Math.Clamp((maxX - heightField.bound.min.x) / heightField.cellSize, 0, heightField.width - 1);
-            Debug.Log("x0 x1:" + x0 + " " + x1);
+            int x0 = (int)Math.Clamp(Math.Floor((minX - heightField.bound.min.x) / heightField.cellSize), -1, heightField.width - 1);
+            int x1 = (int)Math.Clamp(Math.Ceiling((maxX - heightField.bound.min.x) / heightField.cellSize), 0, heightField.width - 1);
             for (int x = x0; x < x1; x++)
             { 
                 float cellX = heightField.bound.min.x + heightField.cellSize * x;
                 DividePolygan(cutSegment, nSeg, Axis.x, cellX + heightField.cellSize, out Vector3[] cutSegmentX, out Vector3[] residentX, out int nSegX, out int nResidX);
                 UtilFunc.Swap(ref residentX, ref cutSegment);
+                UtilFunc.Swap(ref nResidX, ref nSeg);
                 if(nSegX < 3) continue; // 同上
                 if(x < 0) continue;
 
                 float spanMin = float.MaxValue;
                 float spanMax = float.MinValue;
-                foreach(Vector3 vert in cutSegmentX)
+                for (int i = 0; i < nSegX; i++)
                 {
-                    spanMin = Math.Min(vert.y, spanMin);
-                    spanMax = Math.Max(vert.y, spanMax);
+                    if(spanMin > cutSegmentX[i].y) spanMin = cutSegmentX[i].y;
+                    if(spanMax < cutSegmentX[i].y) spanMax = cutSegmentX[i].y;  
                 }
                 spanMin -= heightField.bound.min.y; //归一化
                 spanMax -= heightField.bound.min.y;
@@ -209,8 +208,11 @@ public class Voxel
             bool isSameSide = axisOffsetPerVertex[iVertA] * axisOffsetPerVertex[iVertB] >= 0; //有一点在分割线上也认为是同一侧
             if (isSameSide)
             {
-                if (axisOffsetPerVertex[iVertA] >= 0) outPolyA[nOutA++] = vertexs[iVertA];
-                if (axisOffsetPerVertex[iVertA] != 0) continue;
+                if (axisOffsetPerVertex[iVertA] >= 0)
+                {
+                    outPolyA[nOutA++] = vertexs[iVertA];
+                    if (axisOffsetPerVertex[iVertA] != 0) continue;
+                }
                 outPolyB[nOutB++] = vertexs[iVertA];
             }
             else

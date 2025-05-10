@@ -78,6 +78,7 @@ namespace Util
                 if (len <= (1 << i))
                 {
                     res = i;
+                    break;
                 }
             }
             return res;
