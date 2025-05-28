@@ -1,0 +1,355 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.35f1 (157b46ce122a) revision 1407814'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 16220 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.35f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/PC/RecastInUnity
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+5464
+Successfully changed project path to: C:/Users/PC/RecastInUnity
+C:/Users/PC/RecastInUnity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [6492] Host "[IP] 192.168.5.7 [Port] 0 [Flags] 2 [Guid] 3535646471 [EditorId] 3535646471 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8MIQOKD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [6492] Host "[IP] 192.168.5.7 [Port] 0 [Flags] 2 [Guid] 3535646471 [EditorId] 3535646471 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8MIQOKD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
+Refreshing native plugins compatible for Editor in 78.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.35f1 (157b46ce122a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.35f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/PC/RecastInUnity/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4060 Ti (ID=0x2788)
+    Vendor:   NVIDIA
+    VRAM:     7949 MB
+    Driver:   32.0.15.6094
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.35f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.35f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.35f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56860
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.35f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006978 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 77.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.734 seconds
+Domain Reload Profiling:
+	ReloadAssembly (735ms)
+		BeginReloadAssembly (96ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (527ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (120ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (319ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (78ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (170ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004806 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Completed reload, in  1.753 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1754ms)
+		BeginReloadAssembly (156ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1481ms)
+			LoadAssemblies (116ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (313ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (941ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (810ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3325 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (46.4 KB). Loaded Objects now: 3784.
+Memory consumption went from 116.3 MB to 116.3 MB.
+Total: 2.047700 ms (FindLiveObjects: 0.204400 ms CreateObjectMapping: 0.093700 ms MarkObjects: 1.695800 ms  DeleteObjects: 0.053100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 656950.227088 seconds.
+  path: Assets/Plugins/RootMotion/FinalIK/Gizmos/FABRIKRoot Icon.png
+  artifactKey: Guid(55f7720fb239042f08656d4ab294f5c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/FinalIK/Gizmos/FABRIKRoot Icon.png using Guid(55f7720fb239042f08656d4ab294f5c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6e296bcb971679e362d4cfa6e0661be') in 0.068813 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Plugins/RootMotion/FinalIK/Gizmos/GrounderFBBIK Icon.png
+  artifactKey: Guid(36056811931e14f20adcc2767d6262e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/FinalIK/Gizmos/GrounderFBBIK Icon.png using Guid(36056811931e14f20adcc2767d6262e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ee18b0557ed40797561d1a8db3b2fd') in 0.016073 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Plugins/RootMotion/FinalIK/Gizmos/Mapping Icon.png
+  artifactKey: Guid(8e949b7451d544077b75cb3246f9f739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/FinalIK/Gizmos/Mapping Icon.png using Guid(8e949b7451d544077b75cb3246f9f739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5c5c84bb6b215a0382b61007690758f') in 0.015036 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Plugins/RootMotion/FinalIK/Gizmos/InteractionObject Icon.png
+  artifactKey: Guid(9e5cf919254ee4d6bb9ccd7dc1b4bebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/FinalIK/Gizmos/InteractionObject Icon.png using Guid(9e5cf919254ee4d6bb9ccd7dc1b4bebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '242c6ec6709256857622406ebab49fcf') in 0.015389 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Plugins/RootMotion/FinalIK/Gizmos/RotationLimitHinge Icon.png
+  artifactKey: Guid(ac7ab65192f5c4348bdd26925b0bb42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/FinalIK/Gizmos/RotationLimitHinge Icon.png using Guid(ac7ab65192f5c4348bdd26925b0bb42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa98b91dd750128d176cb41d4bbb22fa') in 0.014158 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Plugins/RootMotion/FinalIK/Gizmos/RotationLimitAngle Icon.png
+  artifactKey: Guid(7e0729a4bf8e24db994fb1390c510a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/FinalIK/Gizmos/RotationLimitAngle Icon.png using Guid(7e0729a4bf8e24db994fb1390c510a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4523336963656415441306156a7829c6') in 0.015901 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Plugins/RootMotion/FinalIK/Gizmos/GrounderIK.png
+  artifactKey: Guid(7c84c5721b6d74a15ab63fe46effb886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/FinalIK/Gizmos/GrounderIK.png using Guid(7c84c5721b6d74a15ab63fe46effb886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e3ea3b283f12cd5622d83e95306f46') in 0.012515 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 7.688969 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Physics Materials/Zero Friction.physicMaterial
+  artifactKey: Guid(a3fd0ffcf0d0a384ba3568687a96ab8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Physics Materials/Zero Friction.physicMaterial using Guid(a3fd0ffcf0d0a384ba3568687a96ab8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c73e84df008fdc57924b65db7d2092ca') in 0.015078 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 2.587272 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Die Backwards.fbx
+  artifactKey: Guid(64e6dc075aba046e1a89981cc7cc1868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Die Backwards.fbx using Guid(64e6dc075aba046e1a89981cc7cc1868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ef64a59c327dd179b2bc5bc24ddece1') in 0.371428 seconds 
+Number of asset objects unloaded after import = 190
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Walk Backwards.fbx
+  artifactKey: Guid(cd3dc152a8698d94890a6312ab347ba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Walk Backwards.fbx using Guid(cd3dc152a8698d94890a6312ab347ba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23f987e7f92388968f416135c7266663') in 0.005537 seconds 
+Number of asset objects unloaded after import = 159
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Run Turn.fbx
+  artifactKey: Guid(f2058580a3b66b041bc906b2a8d0accd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Run Turn.fbx using Guid(f2058580a3b66b041bc906b2a8d0accd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f76f2752f27a1e71db0e1874ffffaf8') in 0.006284 seconds 
+Number of asset objects unloaded after import = 164
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Walk.FBX
+  artifactKey: Guid(739b2627204c24240aa40c4f67f59d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Walk.FBX using Guid(739b2627204c24240aa40c4f67f59d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec59f782bb15f11af4144efeb1d2680c') in 0.007021 seconds 
+Number of asset objects unloaded after import = 121
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Mid Air.fbx
+  artifactKey: Guid(5549c8281f3923d4bbaa299fc075558c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Humanoid Animations/Mid Air.fbx using Guid(5549c8281f3923d4bbaa299fc075558c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e0c13642d43651f6e5a8d65297d44e5') in 0.362262 seconds 
+Number of asset objects unloaded after import = 298
+========================================================================
+Received Import Request.
+  Time since last request: 80.473375 seconds.
+  path: Assets/_TerrainAutoUpgrade/layer_Sand 118c7f28bcf2878ea.terrainlayer
+  artifactKey: Guid(28b3c1d912903254da3a20a95641d965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_TerrainAutoUpgrade/layer_Sand 118c7f28bcf2878ea.terrainlayer using Guid(28b3c1d912903254da3a20a95641d965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81fd7e32e4894fe210723208c8beeb49') in 0.018816 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 9.842204 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Textures/Prototype Blue.png
+  artifactKey: Guid(a728074dab499e0498b46729b7258ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Textures/Prototype Blue.png using Guid(a728074dab499e0498b46729b7258ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b5ef60c6659dffc68e7f986c2034bec') in 0.016959 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.026244 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Black Grid.mat
+  artifactKey: Guid(035a48a539312914f8762cf7100ec0cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Black Grid.mat using Guid(035a48a539312914f8762cf7100ec0cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c0a7c81f340fddffd4e418ac8c4f9e4') in 0.116214 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Smoke.mat
+  artifactKey: Guid(c7cf1644632654b25826f171555081f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Smoke.mat using Guid(c7cf1644632654b25826f171555081f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '376035235f754586a76510f1c5ca2bca') in 0.021649 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Green Grid.mat
+  artifactKey: Guid(7e451a94e6eaac34db05cedecc3e0202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Green Grid.mat using Guid(7e451a94e6eaac34db05cedecc3e0202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '991d401aa15e855d1ff93cd4f755df9e') in 0.006846 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Blue Grid.mat
+  artifactKey: Guid(dcca7a3502858e84ab6d5f11a14518e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Blue Grid.mat using Guid(dcca7a3502858e84ab6d5f11a14518e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2c5a0aa5757c73b92413e643d265342') in 0.007170 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Blue Smooth.mat
+  artifactKey: Guid(aec38ac1f2b4b994f9fe780ff5de7217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Blue Smooth.mat using Guid(aec38ac1f2b4b994f9fe780ff5de7217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96cc2742f9155854deacbf2d465acdf1') in 0.006221 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Red Smooth.mat
+  artifactKey: Guid(f8ce3b3f786c145e397f3c275f706895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Red Smooth.mat using Guid(f8ce3b3f786c145e397f3c275f706895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97fd65c1ebdc513b13eb210640c8f1fa') in 0.006468 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Black Smooth.mat
+  artifactKey: Guid(88532a819aae1c040be0f9988d58122d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Prototyping/Materials/Prototype Black Smooth.mat using Guid(88532a819aae1c040be0f9988d58122d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9b920b9ef449870b3392e217870155') in 0.006657 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.837363 seconds.
+  path: Assets/Plugins/RootMotion/Shared Demo Assets/Props/Prefabs/MP-40.prefab
+  artifactKey: Guid(8de178d6cf9b04012b107cf1daea475c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Plugins/RootMotion/Shared Demo Assets/Props/Prefabs/MP-40.prefab using Guid(8de178d6cf9b04012b107cf1daea475c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da930f0bd4d80f20575ddad821b4f1e') in 0.086189 seconds 
+Number of asset objects unloaded after import = 23
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

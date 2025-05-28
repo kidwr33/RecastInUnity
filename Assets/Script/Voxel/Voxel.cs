@@ -35,7 +35,7 @@ public class Span
 {
     public int min;
     public int max;
-    public Span next; // ¥”µÕµΩ∏„≈≈–Ú
+    public Span next; // sort by the height 
 
 }
 public class Voxel 
